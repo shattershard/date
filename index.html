@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Will you go on a date with me? 💌</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="card card--intro" data-step="intro">
+        <div class="card__emoji">💌</div>
+        <h1 class="card__title">Рада, что ты не сказал «нет»</h1>
+        <p class="card__subtitle">
+          Будь готова к
+          <span class="highlight">6 вечера</span>, я за тобой заеду ✨
+        </p>
+        <button class="btn primary js-next">поехали</button>
+        <p class="card__hint">
+          P.S. Обычные люди пишут сообщения, а я сделала маленький сайт.
+        </p>
+      </section>
+
+      <section class="card card--question" data-step="ask">
+        <div class="card__avatar">🐶</div>
+        <h2 class="card__title">Пойдёшь со мной на свидание?</h2>
+        <div class="card__buttons">
+          <button class="btn ghost js-no">
+            нет...
+          </button>
+          <button class="btn primary js-yes">
+            да 💕
+          </button>
+        </div>
+      </section>
+
+      <section class="card card--wow" data-step="wow">
+        <div class="card__emoji">🧸</div>
+        <h2 class="card__title">ПОДОЖДИ, ТЫ ПРАВДА СКАЗАЛА «ДА»?!</h2>
+        <p class="card__subtitle">
+          Я была морально готова только к «нет», если честно 😭
+        </p>
+        <button class="btn primary js-next">
+          окей, окей, продолжаем
+        </button>
+      </section>
+
+      <section class="card card--food" data-step="food">
+        <h2 class="card__title">Что будем есть? 🍜✨</h2>
+        <p class="card__subtitle">выбери всё, что звучит вкусно</p>
+        <div class="choices-grid" id="foodChoices">
+          <button class="choice" data-value="Пицца">🍕 Пицца</button>
+          <button class="choice" data-value="Суши">🍣 Суши</button>
+          <button class="choice" data-value="Бургеры">🍔 Бургеры</button>
+          <button class="choice" data-value="Паста">🍝 Паста</button>
+          <button class="choice" data-value="Тако">🌮 Тако</button>
+          <button class="choice" data-value="Рамен">🍜 Рамен</button>
+        </div>
+        <button class="btn primary js-next">
+          выбрали, идём дальше
+        </button>
+      </section>
+
+      <section class="card card--date" data-step="date">
+        <h2 class="card__title">Когда ты свободна? 📅</h2>
+        <label class="field">
+          <span class="field__label">Выбери день</span>
+          <input type="date" id="dateInput" class="field__input" />
+        </label>
+        <label class="field">
+          <span class="field__label">Во сколько?</span>
+          <input type="time" id="timeInput" class="field__input" />
+        </label>
+        <button class="btn primary js-finish">
+          забронировать свидание
+        </button>
+        <p class="card__hint">
+          Если дата не выбрана — значит, свидание прямо сегодня 😏
+        </p>
+      </section>
+
+      <section class="card card--result" data-step="result">
+        <div class="card__emoji">💖</div>
+        <h2 class="card__title">У нас свидание!</h2>
+        <p class="card__subtitle" id="resultText"></p>
+        <p class="card__hint">
+          Скринов достаточно, дальше увидимся в реальности ✨
+        </p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
