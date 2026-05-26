@@ -47,7 +47,7 @@ function initFlow() {
       dodgeCount += 1;
       noBtn.textContent = phrases[(dodgeCount - 1) % phrases.length];
 
-      const wrap = noBtn.closest(".card") || document.body;
+      const wrap = noBtn.closest(".card__buttons") || noBtn.closest(".card") || document.body;
       const wrapRect = wrap.getBoundingClientRect();
       const btnRect = noBtn.getBoundingClientRect();
 
@@ -136,7 +136,7 @@ function initFlow() {
       }
 
       if (foods.length) {
-        text += `Я записала: ${foods.join(", ")}. `;
+        text += `Я записал: ${foods.join(", ")}. `;
       } else {
         text += "А есть будем всё, что увидим по дороге. ";
       }
